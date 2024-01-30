@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Work Sans;
+  src: url(../fonts/WorkSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url(../fonts/WorkSans-Regular.ttf);
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #2b2b2b;
+  font-family: Work Sans;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__logo__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__nav__link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.sign_up {
+  display: flex;
+  align-items: center;
+  background: #a259ff;
+  gap: 12px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 20px;
+}
+.header__burger__btn {
+  width: 30px;
+  height: 30px;
+  background-color: #2b2b2b;
+  position: relative;
+  border: none;
+  display: none;
+}
+.header__burger__btn span {
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  border-radius: 3px;
+  transition: transform 0.5s opacity 0.5s background-color 0.5s;
+}
+.header.open .header__burger__btn span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.header.open .header__burger__btn span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__burger__btn span:nth-child(3) {
+  transform: rotate(45deg);
+}
+.header__burger__btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.header__burger__btn span:nth-child(2) {
+  width: 30px;
+}
+.header__burger__btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+@media (max-width: 760px) {
+  .header__burger__btn {
+    display: block;
+    background-color: transparent;
+  }
+  .header__nav {
+    position: absolute;
+    right: 0;
+    top: -300px;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 20px 20px 20px;
+    background: #a259ff;
+    transition: transform 1s;
+  }
+  .sign_up {
+    order: -1;
+    background: none;
+    border: 1px solid #fff;
+    padding: 0 20px;
+  }
+  .header.open .header__nav {
+    transform: translateY(300px);
+  }
+  .header__nav__link:hover {
+    border-bottom: 1px solid white;
+    font-size: 18px;
+  }
+}
