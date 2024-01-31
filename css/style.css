@@ -679,49 +679,67 @@ a {
   height: 430px;
   margin-top: 80px;
   border-radius: 20px;
+  gap: 30px;
 }
 .widget__img__box {
   width: 100%;
+}
+.widget__box__images {
+  width: 100%;
+  object-fit: cover;
 }
 .widget__info__box {
   width: 100%;
 }
 .widget__info__title {
   margin: 0;
-font-size: 38px;
-font-weight: 600;
-line-height: 46px;
-letter-spacing: 0em;
-text-align: left;
-
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .widget__info__text {
- margin: 0;
-font-size: 22px;
-font-weight: 400;
-line-height: 35px;
-letter-spacing: 0em;
-text-align: left;
-
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .widget__info__buttons {
-
+  display: flex;
+  margin-top: 40px;
 }
 .widget__btn1 {
   background: #fff;
-  padding: 10px 60px;
-  border-radius:20px ;
-  
+  padding: 13px 60px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .widget__btn2 {
+  background: #a259ff;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  right: 15px;
 }
 .widget__btn__link {
-font-size: 16px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
 }
 
 @media (max-width: 1000px) {
@@ -736,6 +754,21 @@ text-align: left;
   }
   .box3 {
     display: none;
+  }
+  .widget__info__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .widget__btn1 {
+    width: 100%;
+    padding: 10px 30px;
+  }
+  .widget__btn2 {
+    width: 100%;
+    right: 0;
+    padding: 10px 30px;
+    justify-content: center;
   }
 }
 @media (max-width: 900px) {
@@ -824,6 +857,13 @@ text-align: left;
     display: flex;
     align-items: center;
   }
+  .widget__content {
+    flex-direction: column;
+    height: 700px;
+    padding: 40px 0 40px 0;
+    background: none;
+    border-radius: 0px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -864,6 +904,7 @@ text-align: left;
     width: 100%;
   }
 }
+
 @media (max-width: 500px) {
   .categories__box {
     grid-template-columns: repeat(2, 1fr);
